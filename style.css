@@ -1,0 +1,320 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    width: 100vw;
+    height: 300vh;
+    background: linear-gradient( 10deg, #dd7ca3, #f7cedd);
+    background-size: 100vw 180vh;
+    overflow-x: hidden;
+}
+header{
+    height: 10vh;
+    width: 100vw;
+    z-index: 3px;
+    background: url(./assets/morango.png);
+    background-size: 30vw;
+    
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1.5rem;
+}
+nav a{
+    font-size: 22px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Calistoga", serif;
+}
+nav a:hover {
+    font-size: 25px;
+    color: #f84ee1;
+    border-bottom: 1px solid #f543e6;
+    font-weight: 800;
+    transition: 1s;
+}
+.img-fundo{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    filter: brightness(0.55) opacity(0.98);
+}
+.home{
+    position: relative;
+    display: flex;
+    
+}
+.logo{
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+}
+.logo img{
+    width: 100vw;
+    height: 80vh;
+    object-fit: fill;
+    filter: brightness(0.50) opacity(0.98);
+    position: relative;
+    border-radius: 0.5em;
+}
+.texto{
+    font-family: "Calistoga", serif;
+    font-size: 17px;
+    width: 50vw;
+    color: #ffffff;
+    position: relative;
+    top: 7em;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    
+}
+.texto button{
+    position: relative;
+    font-family: "Calistoga", serif;
+    margin-top: 1.5rem;
+    width: 15vw;
+    height: 7vh;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    font-weight: 400;
+    background-color: #ff28b7;
+    color: #ffffff;
+}
+.texto button:hover{
+    font-size: 17px;
+    border: 1px solid #ff28b7;
+    background-color: #00000000;
+    transition: 1s ease-in-out;
+}
+.Sobre{
+    position: relative;
+    top: 25em;
+    width: 100vw;
+}
+.Box-on{
+    position: relative;
+    top: 2rem;
+}
+.Box-on2{
+    display: flex;
+    filter: none
+}
+.Box-on h1{
+    text-align: center;
+    font-size: 45px;
+    font-family: "Calistoga", serif;
+    color: #ffffff;
+}
+.Box-on h1 span{
+    color: #353535;
+}
+.logo2{
+    position: relative;
+    left: 4em;
+    top: 4em;
+}
+.logo2 img{
+    width: 25em;
+    margin-right: 2em;
+    border-radius: 4em;
+    box-shadow: 1px 1px 10px #353535;
+}
+.info{
+    display: flex;
+    height: 22em;
+    width: 45em;
+    align-items: center;
+    position: relative;
+    left: 4em;
+    top: 2em;
+    background: #fd83d2;
+    padding: 2em;
+    border-radius: 20px;
+    box-shadow: 1px 1px 7px #353535;
+}
+.info p{
+    width: 40em;
+    font-family: "Calistoga", serif;
+    font-size: 17px;
+    line-height: 1.6em;
+    color: #fdfdfd;
+}
+.background2{
+    width: 100vw;
+    position: absolute;
+    z-index: -2;
+    filter: brightness(0.50) opacity(0.98);
+}
+.Box-cakes{
+    height: 90vh;
+    background: url(https://ideogram.ai/assets/image/lossless/response/eQpoZlgYQZugwV4xa8hHgw);
+    background-size: 100vw 100vh;
+    position: relative;
+    top: 34rem;
+    
+}
+.title-cakes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.title-cakes h2{
+    letter-spacing: 3px;
+    font-size: 40px;
+    font-family: "Calistoga", serif;
+    color: #ffffff;
+}
+.bolo{
+    width: 200px;
+    height: 200px;
+    border-radius: 5em;
+}
+
+.catalogos-cake{
+    position: relative;
+    left: 6em;
+    top: 2em;
+    display: grid;
+    width: 80vw;
+    grid-template-columns: 20rem 20rem 20rem;
+    gap: 5em;
+}
+.candy{
+    background: url(https://i.pinimg.com/564x/52/17/e2/5217e2eaadb0b8ed3f0d70960f341c6a.jpg);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-radius: 4em;
+    text-align: center;
+    box-shadow: 1px 1px 10px #000000;
+}
+.cake-1{
+    transition: transform 0.5s;
+}
+.cake-1:hover{
+    transform: scale(1.2);
+}
+.cake-2{
+    transition: transform 0.5s;
+}
+.cake-2:hover{
+    transform: scale(1.2);
+}
+.cake-3{
+    transition: transform 0.5s;
+}
+.cake-3:hover{
+    transform: scale(1.2);
+}
+.cake-4{
+    transition: transform 0.5s;
+}
+.cake-4:hover{
+    transform: scale(1.2);
+}
+.cake-5{
+    transition: transform 0.5s;
+}
+.cake-5:hover{
+    transform: scale(1.2);
+}
+.cake-6{
+    transition: transform 0.5s;
+}
+.cake-6:hover{
+    transform: scale(1.2);
+}
+
+.candy p {
+    color: #ffffff;
+    font-family: "Calistoga", serif;
+}
+.toys{
+    position: relative;
+    height: 100vh;
+    top: 34rem;
+    background: url(https://babyherois.com.br/wp-content/uploads/2021/11/2021-12-08-brinquedos-inflaveis-para-alugar.jpg);
+    background-size: 100vw 100vh;
+}
+h3{
+    letter-spacing: 3px;
+    font-size: 40px;
+    font-family: "Calistoga", serif;
+    color: #ffffff;
+}
+.brinquedos{
+    width: 250px;
+    height: 250px;
+    border-radius: 5em;
+}
+.box-toys{
+    position: relative;
+    width: 80vw;
+    top: 2em;
+    left: 12em;
+    display: grid;
+    grid-template-columns: .5fr .5fr;
+    gap: 4em;
+    text-align: center;
+    
+}
+.toy-1{
+    transition: transform 0.5s;
+}
+.toy-1 p{
+    color: #070707;
+    font-family: "Calistoga", serif;
+    font-size: 1.5em;
+}
+.toy-1:hover{
+    transform: scale(1.2);
+}
+.toy-2{
+    transition: transform 0.5s;
+}
+.toy-2 p{
+    color: #000000;
+    font-family: "Calistoga", serif;
+    font-size: 1.5em;
+}
+.toy-2:hover{
+    transform: scale(1.2);
+}
+.toy-3{
+    transition: transform 0.5s;
+}
+.toy-3 p{
+    color: #000000;
+    font-family: "Calistoga", serif;
+    font-size: 1.5em;
+}
+.toy-3:hover{
+    transform: scale(1.2);
+}
+.toy-4{
+    transition: transform 0.5s;
+}
+.toy-4 p{
+    color: #000000;
+    font-family: "Calistoga", serif;
+    font-size: 1.5em;
+}
+.toy-4:hover{
+    transform: scale(1.2);
+}
+.box{
+    
+    width: 20em;
+    height: 18em;
+    padding: 1em;
+    border-radius: 4em;
+    
+}
