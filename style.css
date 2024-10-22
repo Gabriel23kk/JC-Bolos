@@ -1,320 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    border: none;
+    text-decoration: none;
+    list-style: none;
 }
+
 body{
     width: 100vw;
     height: 300vh;
-    background: linear-gradient( 10deg, #dd7ca3, #f7cedd);
     background-size: 100vw 180vh;
     overflow-x: hidden;
+    font-family: "Pacifico", cursive;
 }
-header{
-    height: 10vh;
-    width: 100vw;
-    z-index: 3px;
-    background: url(./assets/morango.png);
-    background-size: 30vw;
-    
+
+:root {
+    --rosa-escuro: #dd7ca3;
+    --rosa-pastel: #f7cedd;
+    --pessego-claro: #fbbf93;
+    --verde-menta: #a3e0b6;
+    --amarelo-suave: #fff5b7;
+    --azul-pastel: #b3e5fc;
 }
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    padding: 10px 20px;
+}
+
 nav{
-    display: flex;
-    justify-content: space-around;
-    padding-top: 1.5rem;
+    margin-top: 1rem;
 }
-nav a{
-    font-size: 22px;
-    text-decoration: none;
-    color: #ffffff;
-    font-family: "Calistoga", serif;
-}
-nav a:hover {
-    font-size: 25px;
-    color: #f84ee1;
-    border-bottom: 1px solid #f543e6;
-    font-weight: 800;
-    transition: 1s;
-}
-.img-fundo{
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    filter: brightness(0.55) opacity(0.98);
-}
-.home{
-    position: relative;
-    display: flex;
-    
-}
-.logo{
-    position: absolute;
-    display: block;
+
+nav ul li {
     margin: 0 auto;
 }
-.logo img{
-    width: 100vw;
-    height: 80vh;
-    object-fit: fill;
-    filter: brightness(0.50) opacity(0.98);
-    position: relative;
-    border-radius: 0.5em;
+
+nav ul li a {
+    color: white;
+    font-size: 1.5rem;
 }
-.texto{
-    font-family: "Calistoga", serif;
-    font-size: 17px;
-    width: 50vw;
-    color: #ffffff;
+
+nav ul li a:hover{
+    color: var(--rosa-escuro);    
+}
+
+.home {
+    height: 100vh;
+    background-image: url('assets/jc.webp');
+    background-size: cover;
+    background-position: center;
     position: relative;
-    top: 7em;
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.container p {
     font-size: 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    
+    margin-bottom: 20px;
 }
-.texto button{
-    position: relative;
-    font-family: "Calistoga", serif;
-    margin-top: 1.5rem;
-    width: 15vw;
-    height: 7vh;
-    border-radius: 10px;
-    border: none;
-    font-size: 15px;
-    font-weight: 400;
-    background-color: #ff28b7;
-    color: #ffffff;
+
+.container button {
+    font-family: "Poppins", sans-serif;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: var(--rosa-escuro);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
 }
-.texto button:hover{
-    font-size: 17px;
-    border: 1px solid #ff28b7;
-    background-color: #00000000;
-    transition: 1s ease-in-out;
+
+.container button:hover {
+    background-color: var(--pessego-claro);
+    color: #fff;
 }
-.Sobre{
-    position: relative;
-    top: 25em;
-    width: 100vw;
+
+.sobre {
+    padding: 100px 0;
+    background-color: var(--bg-color-light); 
+    position: relative; 
 }
-.Box-on{
-    position: relative;
-    top: 2rem;
-}
-.Box-on2{
-    display: flex;
-    filter: none
-}
-.Box-on h1{
-    text-align: center;
-    font-size: 45px;
-    font-family: "Calistoga", serif;
-    color: #ffffff;
-}
-.Box-on h1 span{
-    color: #353535;
-}
-.logo2{
-    position: relative;
-    left: 4em;
-    top: 4em;
-}
-.logo2 img{
-    width: 25em;
-    margin-right: 2em;
-    border-radius: 4em;
-    box-shadow: 1px 1px 10px #353535;
-}
-.info{
-    display: flex;
-    height: 22em;
-    width: 45em;
-    align-items: center;
-    position: relative;
-    left: 4em;
-    top: 2em;
-    background: #fd83d2;
-    padding: 2em;
-    border-radius: 20px;
-    box-shadow: 1px 1px 7px #353535;
-}
-.info p{
-    width: 40em;
-    font-family: "Calistoga", serif;
-    font-size: 17px;
-    line-height: 1.6em;
-    color: #fdfdfd;
-}
-.background2{
-    width: 100vw;
+
+.sobre::before {
+    content: '';
     position: absolute;
-    z-index: -2;
-    filter: brightness(0.50) opacity(0.98);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.1)); 
+    z-index: 0; 
 }
-.Box-cakes{
-    height: 90vh;
-    background: url(https://ideogram.ai/assets/image/lossless/response/eQpoZlgYQZugwV4xa8hHgw);
-    background-size: 100vw 100vh;
-    position: relative;
-    top: 34rem;
-    
-}
-.title-cakes{
+
+.sobre-container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 40px; 
+}
+
+.sobre-texto {
+    flex: 1;
+    color: var(--text-color);
+}
+
+.sobre-texto h2 {
+    font-size: 48px; 
+    margin-bottom: 20px;
+    color: var(--rosa-escuro);
+    letter-spacing: 4px;
+    border-bottom: 2px solid var(--pessego-claro); 
+}
+
+.sobre-texto p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 20px; 
+    line-height: 1.6;
+    margin-bottom: 15px; 
+    color: #3d251e;
+}
+
+.sobre-logo {
+    flex: 0.8;
+    display: flex;
     justify-content: center;
-    
-}
-.title-cakes h2{
-    letter-spacing: 3px;
-    font-size: 40px;
-    font-family: "Calistoga", serif;
-    color: #ffffff;
-}
-.bolo{
-    width: 200px;
-    height: 200px;
-    border-radius: 5em;
+    align-items: center;
+    background-color: var(--rosa-escuro);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s;
+    position: relative;
 }
 
-.catalogos-cake{
-    position: relative;
-    left: 6em;
-    top: 2em;
-    display: grid;
-    width: 80vw;
-    grid-template-columns: 20rem 20rem 20rem;
-    gap: 5em;
+.logo-flutuante {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    filter: saturate(1.5) drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.5)); 
+    animation: flutuar 3s ease-in-out infinite; 
 }
-.candy{
-    background: url(https://i.pinimg.com/564x/52/17/e2/5217e2eaadb0b8ed3f0d70960f341c6a.jpg);
-    padding-top: 1em;
-    padding-bottom: 1em;
-    border-radius: 4em;
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(-10px); 
+    }
+    100% {
+        transform: translateY(0); 
+    }
+}
+
+.sobre-logo img {
+    filter: saturate(1.5) drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.5)); 
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.3)); 
+}
+
+.sobre-logo:hover {
+    transform: scale(1.05); 
+}
+
+/* Estilização da seção do catálogo */
+.catalogo {
+    padding: 60px 20px;
+    background-color: var(--bg-color-light);
     text-align: center;
-    box-shadow: 1px 1px 10px #000000;
-}
-.cake-1{
-    transition: transform 0.5s;
-}
-.cake-1:hover{
-    transform: scale(1.2);
-}
-.cake-2{
-    transition: transform 0.5s;
-}
-.cake-2:hover{
-    transform: scale(1.2);
-}
-.cake-3{
-    transition: transform 0.5s;
-}
-.cake-3:hover{
-    transform: scale(1.2);
-}
-.cake-4{
-    transition: transform 0.5s;
-}
-.cake-4:hover{
-    transform: scale(1.2);
-}
-.cake-5{
-    transition: transform 0.5s;
-}
-.cake-5:hover{
-    transform: scale(1.2);
-}
-.cake-6{
-    transition: transform 0.5s;
-}
-.cake-6:hover{
-    transform: scale(1.2);
 }
 
-.candy p {
-    color: #ffffff;
-    font-family: "Calistoga", serif;
+.catalogo h2 {
+    font-size: 48px;
+    margin-bottom: 40px;
+    color: var(--rosa-escuro);
 }
-.toys{
+
+.catalogo-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bolo-item {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px); 
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: flutuar 5s ease-in-out infinite; 
+    border: 1px solid var(--rosa-escuro);
+}
+
+.bolo-item:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); 
+}
+
+.bolo-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.bolo-item p {
+    font-size: 2rem;
+    color: #3d251e;
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(-10px); 
+    }
+    100% {
+        transform: translateY(0); 
+    }
+}
+
+/* Seção do catálogo de brinquedos */
+
+.catalogo-brinquedo {
     position: relative;
-    height: 100vh;
-    top: 34rem;
-    background: url(https://babyherois.com.br/wp-content/uploads/2021/11/2021-12-08-brinquedos-inflaveis-para-alugar.jpg);
-    background-size: 100vw 100vh;
+    background-image: url('assets/bolinhas.jpg'); 
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    z-index: 1;
+    overflow: hidden;
 }
-h3{
-    letter-spacing: 3px;
-    font-size: 40px;
-    font-family: "Calistoga", serif;
-    color: #ffffff;
+
+.catalogo-brinquedo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: -1;
 }
-.brinquedos{
+
+.catalogo-container-brinquedo{
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    position: relative;
+    z-index: 2; 
+}
+
+.brinquedo-item {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: flutuar 5s ease-in-out infinite;
+    border: 3px solid transparent;
     width: 250px;
-    height: 250px;
-    border-radius: 5em;
-}
-.box-toys{
-    position: relative;
-    width: 80vw;
-    top: 2em;
-    left: 12em;
-    display: grid;
-    grid-template-columns: .5fr .5fr;
-    gap: 4em;
     text-align: center;
+}
+
+.brinquedo-item p{
+    font-size: 1.5rem;
+}
+
+.brinquedo1 {
+    border-color: var(--rosa-escuro);
+}
+
+.brinquedo2 {
+    border-color: var(--azul-pastel);
+}
+
+.brinquedo3 {
+    border-color: var(--pessego-claro);
+}
+
+.brinquedo4 {
+    border-color: var(--verde-menta);
+}
+
+.brinquedo-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+}
     
 }
-.toy-1{
-    transition: transform 0.5s;
+
+.brinquedo-item:hover, .bolo-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
 }
-.toy-1 p{
-    color: #070707;
-    font-family: "Calistoga", serif;
-    font-size: 1.5em;
+
+.site-footer {
+    background-color: var(--rosa-pastel); 
+    padding: 20px;
+    text-align: center;
+    color: var(--rosa-escuro); 
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
-.toy-1:hover{
-    transform: scale(1.2);
+
+.footer-content p {
+    margin: 0;
 }
-.toy-2{
-    transition: transform 0.5s;
-}
-.toy-2 p{
-    color: #000000;
-    font-family: "Calistoga", serif;
-    font-size: 1.5em;
-}
-.toy-2:hover{
-    transform: scale(1.2);
-}
-.toy-3{
-    transition: transform 0.5s;
-}
-.toy-3 p{
-    color: #000000;
-    font-family: "Calistoga", serif;
-    font-size: 1.5em;
-}
-.toy-3:hover{
-    transform: scale(1.2);
-}
-.toy-4{
-    transition: transform 0.5s;
-}
-.toy-4 p{
-    color: #000000;
-    font-family: "Calistoga", serif;
-    font-size: 1.5em;
-}
-.toy-4:hover{
-    transform: scale(1.2);
-}
-.box{
-    
-    width: 20em;
-    height: 18em;
-    padding: 1em;
-    border-radius: 4em;
-    
+
+/* Estilo Responsivo */
+@media (max-width: 768px) {
+    .sobre-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-logo {
+        margin-top: 30px;
+    }
+
+    .sobre-texto h2 {
+        font-size: 36px; 
+    }
+
+    .sobre-texto p {
+        font-size: 18px; 
+    }
 }
