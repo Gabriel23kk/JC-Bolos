@@ -17,6 +17,7 @@ body{
     background-size: 100vw 180vh;
     overflow-x: hidden;
     font-family: "Pacifico", cursive;
+    overflow-x: hidden;
 }
 
 :root {
@@ -155,6 +156,7 @@ nav ul li a:hover{
     line-height: 1.6;
     margin-bottom: 15px; 
     color: #3d251e;
+    text-align: justify;
 }
 
 .sobre-logo {
@@ -264,6 +266,15 @@ nav ul li a:hover{
 
 /* Seção do catálogo de brinquedos */
 
+.catalogo-brinquedo h2{
+    font-size: 48px; 
+    margin-bottom: 20px;
+    color: var(--rosa-escuro);
+    letter-spacing: 4px;
+    text-align: center;
+    display: none;
+}
+
 .catalogo-brinquedo {
     position: relative;
     background-image: url('assets/bolinhas.jpg'); 
@@ -366,7 +377,19 @@ nav ul li a:hover{
 }
 
 /* Estilo Responsivo */
-@media (max-width: 768px) {
+@media (max-width: 1290px){
+    .brinquedo-item {
+        width: 220px;
+    }
+}
+
+@media (max-width: 1140px){
+    .brinquedo-item{
+        width: 180px;
+    }
+}
+
+@media (max-width: 1000px) {
     .sobre-container {
         flex-direction: column;
         text-align: center;
@@ -382,5 +405,87 @@ nav ul li a:hover{
 
     .sobre-texto p {
         font-size: 18px; 
+    }
+}
+
+@media (max-width: 980px){
+    .catalogo-brinquedo h2{
+        display: flex;
+        justify-content: center;
+    }
+
+    .brinquedo-item p{
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .catalogo-brinquedo{
+        background-image: none;
+    }
+
+    .catalogo-brinquedo::before{
+        background: none;
+    }
+}
+
+@media (max-width: 940px){
+    .catalogo-container-brinquedo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .brinquedo-item{
+        width: 250px;
+    }
+
+    .brinquedo-item p{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 850px){
+    .catalogo-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 740px) {
+    .container{
+        width: 80%;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px){
+    .catalogo-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .bolo-item p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 450px){
+    .container p{
+        font-size: 18px;
+    }
+
+    .catalogo-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        align-items: center;
+
+        gap: 30px;
+        max-width: 500px;
+        margin: 0 auto;
     }
 }
