@@ -57,7 +57,8 @@ nav ul li a {
 }
 
 nav ul li a:hover{
-    color: var(--rosa-escuro);    
+    color: var(--rosa-escuro);
+    transition: 1s;    
 }
 
 .home {
@@ -106,9 +107,14 @@ nav ul li a:hover{
 
 .container button:hover {
     background-color: var(--pessego-claro);
+    transition: 1s;
     color: #fff;
 }
-
+.zap{
+    position: relative;
+    top: 1em;
+    left: 2em;
+}
 .sobre {
     padding: 100px 0;
     background-color: var(--bg-color-light); 
@@ -240,13 +246,34 @@ nav ul li a:hover{
     transform: translateY(-10px); 
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); 
 }
+.bolo-item:hover{
+    animation: aumentar2 2s ease-in-out infinite;
+}
+
+/* ANIMAÇÃO PARA AUMENTAR A DIV DO BOLO AO PASSAR O MOUSE EM CIMA*/
+@keyframes aumentar2 {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.05);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
 
 .bolo-item img {
     max-width: 100%;
     border-radius: 10px;
     margin-bottom: 15px;
 }
-
+.collum-1{
+    height: 70%;
+}
+.collum-2{
+    height: 70%;
+}
 .bolo-item p {
     font-size: 2rem;
     color: #3d251e;
@@ -342,6 +369,9 @@ nav ul li a:hover{
     border-radius: 10px;
     margin-bottom: 10px;
 }
+.toysIMG{
+    height: 60%;
+}
 
 @keyframes flutuar {
     0% {
@@ -352,13 +382,28 @@ nav ul li a:hover{
     }
     100% {
         transform: translateY(0);
-}
+    }
     
 }
 
 .brinquedo-item:hover, .bolo-item:hover {
     transform: translateY(-10px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+.brinquedo-item:hover{
+    animation: aumentar 2s ease-in-out infinite;
+}
+/* ANIMAÇÃO PARA AUMENTAR A DIV DOS BRINQUEDOS AO PASSAR O MOUSE EM CIMA*/
+@keyframes aumentar {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 
 .site-footer {
