@@ -578,6 +578,12 @@ nav ul li a:hover{
     .bolo-item p {
         font-size: 1rem;
     }
+    .collum-1{
+        height: 20vh;
+    }
+    .collum-2{
+        height: 20vh;
+    }
 }
 
 @media (max-width: 450px){
@@ -594,5 +600,11 @@ nav ul li a:hover{
         gap: 30px;
         max-width: 500px;
         margin: 0 auto;
+    }
+    .collum-1{
+        height: 20vh;
+    }
+    .collum-2{
+        height: 20vh;
     }
 }
