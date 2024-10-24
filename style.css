@@ -61,6 +61,64 @@ nav ul li a:hover{
     transition: 1s;    
 }
 
+/* Ícones escondidos por padrão, aparecem apenas em mobile */
+.menu-icon i {
+    display: none;
+    font-size: 2rem;
+    color: white;
+}
+
+/* Esconde o menu e mostra o ícone quando a tela for menor que 500px */
+@media (max-width: 500px) {
+    nav ul {
+        display: none; /* Esconde o menu inicialmente */
+        flex-direction: column;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo escura e semi-transparente */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 20px 0;
+        opacity: 0; /* Invisível inicialmente */
+        transition: all 0.3s ease-in-out; /* Transição suave ao abrir/fechar */
+    }
+
+    nav ul li a {
+        color: white; /* Cor das letras no menu */
+        font-size: 1.5rem;
+    }
+
+    /* Mostra o ícone de hambúrguer inicialmente */
+    .menu-icon i.fa-bars {
+        display: block;
+    }
+
+    /* Estilo do botão do menu (ícone) */
+    .menu-icon {
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    /* Quando o menu estiver aberto, mostra o ícone de X */
+    .menu-icon.change i.fa-bars {
+        display: none;
+    }
+
+    .menu-icon.change i.fa-times {
+        display: block;
+    }
+
+    /* Quando o menu estiver aberto, exibe a lista com fundo escuro e letras brancas */
+    #nav-list.active {
+        display: flex;
+        opacity: 1; /* Exibe a lista */
+    }
+}
+
+
 .home {
     height: 100vh;
     background-image: url('assets/jc.webp');
@@ -502,6 +560,10 @@ nav ul li a:hover{
         width: 80%;
         font-size: 20px;
     }
+
+    .bolo-item p{
+        font-size: 1.4rem;
+    }
 }
 
 @media (max-width: 600px){
@@ -514,7 +576,7 @@ nav ul li a:hover{
     }
 
     .bolo-item p {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 }
 
